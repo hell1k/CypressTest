@@ -15,6 +15,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: "https://askona:askona@beta.askona.ru",
+    baseUrl: "https://askona.ru",
   },
 });
