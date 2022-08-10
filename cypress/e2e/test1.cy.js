@@ -7,17 +7,8 @@ describe('empty spec', () => {
   
   it("Открытие страницы матрасов", () => {
     main.openMattressPage()
-  });
-
-  it("Открытие рандомной карточки", () =>{
     main.openRandomCard()
-  })
-
-  it('Выбор основания', function () {
     product.selectBase()
-  });
-
-  it('Добавление в корзину', function () {
     product.addToBasket()
   });
 
