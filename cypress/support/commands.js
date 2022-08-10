@@ -11,15 +11,15 @@ export function getAmountElements(element) {
 }
 
 export function click(element) {
-    cy.get(element).click()
+    cy.get(element, { timeout: 10000 }).click()
 }
 
 export function clickSpecificElement(element, number) {
-    cy.get(element).eq(number).click()
+    cy.get(element, { timeout: 10000 }).eq(number).click()
 }
 
 export function setText(element, string) {
-    cy.get(element).type(string)
+    cy.get(element, { timeout: 10000 }).type(string)
 }
 
 export function openPage(url) {
