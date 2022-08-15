@@ -1,29 +1,41 @@
 import MainPage from "./pages/MainPage"
 import ProductPage from "./pages/ProductPage";
+import {click, getRandom} from "../support/commands";
 
 require("cypress-xpath");
 describe('empty spec', () => {
     const main = new MainPage();
     const product = new ProductPage();
-    let priceBefore;
+    let cardPrice;
+    let cartPrice;
+    let cardName;
+    let cartName;
+
     it("Открытие страницы матрасов", () => {
         main.openMattressPage()
         main.openRandomCard()
 
-        cy.get(product.mattressPrice).invoke("text").then((text) => {
-            priceBefore = text;
-            return text;
+        cy.get(product.mattressPrice).then((element) => {
+            cardPrice = element.text().replaceAll(/[^+\d]/g, '');
         })
 
-    });
+        cy.get(product.mattressName).then((element) => {
+            cardName = element.text()
+        })
 
-    it("test variable", () => {
-        cy.log(priceBefore)
-        product.selectBase()
         product.addToBasket()
-        cy.get(product.popupPrice).then((text)=>{
-            cy.log("price1 - " + priceBefore + "        price2 - " + text.text())
-            expect(priceBefore).equal(text.text())
+        click(product.checkout)
+
+        cy.get(product.cartPrice).then((element) => {
+            cartPrice = element.text().replaceAll(/[^+\d]/g, '');
+            expect(cardPrice).to.equal(cartPrice)
         })
-    })
+
+        cy.get(product.cartName).then((element) => {
+            cartName = element.text()
+            expect(cartName).to.contain(cardName)
+        })
+    });
 });
+
+

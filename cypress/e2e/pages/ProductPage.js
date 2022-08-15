@@ -6,7 +6,11 @@ class ProductPage {
     addToBasketElement = 'button#product-info__btn-buy'
     popupAddToCart = 'div#added-to-cart'
     mattressPrice = 'p.product-card-2022-meta__price-new'
+    mattressName = 'h1 strong'
     popupPrice = 'span.price_new'
+    checkout = 'a.added-checkout'
+    cartName = 'div.cart-item__main > a'
+    cartPrice = 'ul > li:nth-child(1) > span:nth-child(2)'
 
     selectBase(){
         click(this.base)

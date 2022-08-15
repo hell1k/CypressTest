@@ -1,7 +1,7 @@
 require("cypress-xpath");
 
 export function getRandom(number) {
-    return Math.ceil(Math.random() * number);
+    return Math.floor(Math.random() * number);
 }
 
 export function getAmountElements(element) {
