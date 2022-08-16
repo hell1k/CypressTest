@@ -13,6 +13,10 @@ class MainPage {
         cy.visit('/matrasy')
     }
 
+    openBedsPage(){
+        cy.visit('/krovati')
+    }
+
     openRandomCard(){
         cy.get(this.productCard).then((element) => {
             cy.get(this.productCard).eq(getRandom(element.length)).click()
