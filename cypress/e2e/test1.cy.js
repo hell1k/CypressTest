@@ -54,7 +54,7 @@ describe('Кровати', () => {
     it("Добавление кровати в корзину", () => {
         // main.openBedsPage()
         // main.openRandomCard()
-        cy.visit('https://www.askona.ru/krovati/orlando.htm')
+        cy.visit('krovati/orlando.htm')
         product.selectRandomColor()
         product.selectRandomSize()
         product.selectRandomBase()
@@ -102,5 +102,8 @@ describe('Кровати', () => {
             cartName = element.text()
             assertContain(cartName, cardName)
         })
+
+
+
     });
 });
