@@ -1,3 +1,5 @@
+import {getRandom} from "../../support/commands";
+
 class MainPage {
     search = '#search-form-input'
     submit = '#search-form button.header-main__submit'
@@ -11,8 +13,14 @@ class MainPage {
         cy.visit('/matrasy')
     }
 
+    openBedsPage(){
+        cy.visit('/krovati')
+    }
+
     openRandomCard(){
-        cy.get(this.productCard).eq(3).click()
+        cy.get(this.productCard).then((element) => {
+            cy.get(this.productCard).eq(getRandom(element.length)).click()
+        })
     }
 
     getCount(){
