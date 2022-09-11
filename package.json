@@ -13,7 +13,7 @@
     "one_click": "cypress run --spec \\\"cypress/e2e/show_cart/one_click/*.js\\\" --browser chrome",
     "show_cart": "cypress run --spec \"cypress/e2e/show_cart/*.js\" --browser chrome",
     "tester_lena": "cypress run --spec \"cypress/e2e/testers_sample/tester_lena/*.js\" --browser chrome",
-    "some_test": "cypress run --spec 'cypress/e2e'  --browser chrome"
+    "some_test": "cypress run --spec 'cypress/e2e/test1.cy.js'  --browser chrome"
   },
   "author": "",
   "license": "ISC",
