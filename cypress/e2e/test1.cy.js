@@ -103,7 +103,5 @@ describe('Кровати', () => {
             assertContain(cartName, cardName)
         })
 
-
-
     });
 });
