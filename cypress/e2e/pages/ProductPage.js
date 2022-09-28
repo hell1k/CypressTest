@@ -12,8 +12,6 @@ class ProductPage {
     bedsName = 'h1 strong'
     popupPrice = 'span.price_new'
     checkout = 'a.added-checkout'
-
-
     bedsColorBtn = 'button[data-select=color-material]'
     bedsColor = 'div.product-card__material-title'
     bedsSize = 'button[data-select=size] span'
@@ -23,6 +21,11 @@ class ProductPage {
     colorList = 'li[data-code=SELECTED_FABRIC_ID][data-in-select-size=true]'
     sizeList = 'li[data-code=SELECTED_HASH_SIZE][data-in-select-color=true]'
     baseList = 'li[data-code=SELECTED_GRID]'
+    installmentBtn = 'button[data-test-card-installment]'
+    buyOneClickBtn = 'button[data-test-card-click]'
+    installmentCity = 'div.col1 a'
+    installmentClose = 'div#credit > div.popup__close'
+    placeOrderBtn = 'button.cart-widget__actions-btn.btn-primary'
 
     selectRandomSize() {
         click(this.bedsSizeBtn)

@@ -6,6 +6,7 @@ class CartPage {
     cartItemBlockTitle = 'div.cart-block__title'
     cartPrice = 'ul > li:nth-child(1) > span:nth-child(2)'
     cartName = 'div.cart-item__main > a'
+    cityInput = 'input#city'
 
     checkCartItem() {
         cy.xpath(this.cartItemBlock, {timeout: 10000}).should('be.visible')
