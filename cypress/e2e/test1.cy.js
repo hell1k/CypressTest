@@ -66,7 +66,6 @@ describe('Кровати', () => {
         cy.get(product.bedsColor).then((element) => {
             cardColor = element.text()
         })
-
         cy.get(product.bedsSize).then((element) => {
             cardSize = element.text()
         })
@@ -88,7 +87,6 @@ describe('Кровати', () => {
                     })
             }
         })
-
         product.addToBasketBeds()
         product.goToCart()
         cart.checkCartItem()

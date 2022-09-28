@@ -1,5 +1,9 @@
 require("cypress-xpath");
 
+export function setMobileResolution() {
+    cy.viewport(414, 896)
+}
+
 export function getRandom(number) {
     return Math.floor(Math.random() * number);
 }
